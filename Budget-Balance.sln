@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetBalance.Api", "BudgetBalance.Api\BudgetBalance.Api.csproj", "{BB232360-3D96-4429-921C-EAFE2F6FBEEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetBalance.Domain", "BudgetBalance.Domain\BudgetBalance.Domain.csproj", "{15B13FC2-DABD-43F2-91D6-497F9678A683}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BB232360-3D96-4429-921C-EAFE2F6FBEEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB232360-3D96-4429-921C-EAFE2F6FBEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB232360-3D96-4429-921C-EAFE2F6FBEEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B13FC2-DABD-43F2-91D6-497F9678A683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B13FC2-DABD-43F2-91D6-497F9678A683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B13FC2-DABD-43F2-91D6-497F9678A683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B13FC2-DABD-43F2-91D6-497F9678A683}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
