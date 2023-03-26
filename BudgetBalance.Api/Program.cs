@@ -4,6 +4,20 @@ using AppContext = BudgetBalance.Api.Data.AppContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Add cors
+//configure cors
+var MyAllowSpecificOrigins = "_acceptedOrigins";
+
+builder.Services.AddCors(options => {
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+    policy => {
+        //policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        policy.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -24,9 +38,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseHsts();
 app.UseHttpsRedirection();
-
+app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthorization();
 
 app.MapControllers();

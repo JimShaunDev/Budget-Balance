@@ -36,6 +36,17 @@ namespace BudgetBalance.Api.Controllers
             return task;
         }
 
+        [HttpPatch]
+        [Route("/Task/Update")]
+        public TaskModel Update(TaskModel model)
+        {
+            var task = _context.Tasks.First(c => c.Id == model.Id);
+            task.Reminder = !task.Reminder;
+            _context.Tasks.Update(task);
+            _context.SaveChanges();
+            return task;
+        }
+
         [HttpDelete]
         [Route("/Task/{id}")]
         public int Remove(int id)
@@ -44,7 +55,7 @@ namespace BudgetBalance.Api.Controllers
             _context.Tasks.Remove(task);
             _context.SaveChanges();
 
-            return task.Id;
+            return id;
         }
     }
 }
