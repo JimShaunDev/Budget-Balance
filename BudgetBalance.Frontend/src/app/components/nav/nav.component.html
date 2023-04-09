@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <span>
+    <a color="white" routerLink="/">
+      <fa-icon [icon]="faIcon"> </fa-icon> Budget Balance</a
+    >
+  </span>
+  <div>
+    <a mat-button (click)="navigateMenu('')">Home</a>
+    <a mat-button (click)="navigateMenu('/About')">Stats</a>
+    <a mat-button (click)="navigateMenu('/About')">What is this?</a>
+  </div>
+</mat-toolbar>
